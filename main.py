@@ -36,7 +36,7 @@ def solve(phrases: list):
         phrase_1 = phrase.replace(' ','') # сохраните фразу без пробелов
         if phrase_1 == phrase_1[::-1]: # сравните фразу с ней же, развернутой наоборот (через [::-1])
            result.append(phrase)
-    print(result)
+    # print(result)
     return result
 
 

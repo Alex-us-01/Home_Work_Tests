@@ -19,18 +19,6 @@ def test_discriminant(a, b, c, expected):
     assert expected == result
 
 
-# @pytest.mark.parametrize(
-#     'a, b, c, expected',
-#     (
-#             # [1, 2, 3, -8],
-#             # [2, 4, 6, -32],
-#             # [5, 2, 8, -156],
-#             # [3, 2, -4, 52],
-#             [2, 2, 2, 10]
-#     )
-#
-# )
-
 def test_discriminant_wrong():
     numbers = [2, 2, 2]
     expected = -32
@@ -59,9 +47,6 @@ def test_vote_wrong():
         vote(numbers)
 
 
-
-
-
 @pytest.mark.parametrize(
     'phrases, expected',
     (
@@ -79,8 +64,6 @@ def test_vote_wrong():
             ],
     )
 )
-
-
 def test_solve(phrases, expected):
     result = solve(phrases)
     assert expected == result
@@ -93,4 +76,22 @@ def test_solve_wrong():
     assert expected == result
 
 
-
+# class TestYandexDisc(YandexDisc):
+#     def test_create_folder(self):
+#         result = self.create_folder()
+#         expected = 201
+#         assert expected == result
+#
+#     def test_check_folder(self):
+#         result = self.check_folder()
+#         expected = 200
+#         assert expected == result
+#
+#     def test_delete_folder(self):
+#         result = self.delete_folder()
+#         expected = 204
+#         assert expected == result
+#
+#     def test_delete_folder_wrong(self):
+#         with pytest.raises(TypeError):
+#             self.delete_folder()
